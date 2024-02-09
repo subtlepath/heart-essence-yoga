@@ -1,3 +1,6 @@
+import { DOMAttributes } from "react"
+
+type CustomElement<T> = Partial<T & DOMAttributes<T> & { children: any }>;
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
@@ -6,6 +9,11 @@ declare global {
       //
       // KV Example:
       // MY_KV: KVNamespace
+    }
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      ['stripe-buy-button']: CustomElement<any>;
     }
   }
 }
