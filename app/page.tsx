@@ -1,5 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import danaJpeg from "../public/dana.jpeg"
+import eamonJpeg from "../public/eamon.jpeg"
 
 export default function Home() {
   return (
@@ -26,39 +28,9 @@ export default function Home() {
         </p>
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="/body"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Gentle Asanas
-          </h2>
-        </a>
-
-        <a
-          href="/mind"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Guided Meditation
-          </h2>
-        </a>
-
-        <a
-          href="/sound"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Sound Healing
-          </h2>
-        </a>
+      <div className={styles.images}>
+        <Image src={danaJpeg} alt="Dana" width={400} height={400} />
+        <Image src={eamonJpeg} alt="Eamon" width={400} height={400} />
       </div>
     </main>
   );

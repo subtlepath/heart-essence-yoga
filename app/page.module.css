@@ -39,10 +39,22 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(33%, auto));
+  grid-template-columns: repeat(2, minmax(50%, auto));
   gap: 1rem;
   max-width: 100%;
   width: var(--max-width);
+}
+
+.images {
+  padding: 2rem;
+  display: flex;
+  max-width: 100%;
+  width: var(--max-width);
+  justify-content: space-between;
+}
+
+.images img {
+  display: block;
 }
 
 .card {
